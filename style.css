@@ -40,21 +40,73 @@ img {
   font-size: 16px;
 }
 
-.plain img{
+.area {
+  position: absolute;
+  z-index: 2;
+}
+
+.obstacl {
+  width: 279px;
+  height: auto;
+  position: absolute;
+  left: 417px;
+  top: -18px;
+  z-index: 3;
+}
+
+
+/* left: 417px; 
+  top: 417px;
+  32.578125%
+*/
+
+.plain img {
   animation: plainShake 1s infinite alternate linear;
   position: absolute;
   width: 120px;
-  height: auto;
+  height: 80px;
   top: 40%;
-  left: 20%;
-  transform: translateX(-50%) translateY(-50%);
+  left: 10%;
+  transform: translateY(-50%);
   object-fit: cover;
+  z-index: 4;
 }
 
+.boom {
+  position: absolute;
+  display: none;
+}
+
+#boom1 {
+  top: 36%;
+  left: 100px;
+  width: 100px;
+  height: auto;
+  z-index: 14;
+}
+
+#boom2 {
+  top: 25%;
+  left: 150px;
+  width: 200px;
+  height: auto;
+  z-index: 12;
+}
+
+#boom3 {
+  top: 36%;
+  left: 200px;
+  width: 100px;
+  height: auto;
+}
+
+
 @keyframes plainShake {
-  from{
-    transform:translateY(0)
-  } to{
-    transform:translateY(-40px)
+  from {
+    transform: translateY(0)
+  }
+
+  to {
+    transform: translateY(-40px)
   }
 }
