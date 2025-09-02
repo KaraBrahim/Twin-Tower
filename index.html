@@ -34,10 +34,33 @@
     <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
     <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
   </div>
-  <button type="button" class="btn" onclick="move()">Play</button>
+  <!-- <button type="button" class="btn" onclick="move()">Play</button> -->
   <div id="plain" class="plain"><img src="images/plain.png"></div>
   <img id="boom1" class="boom" src="./images/boom.png" alt="boooooooom!">
   <img id="boom2" class="boom" src="./images/boom.png" alt="boooooooom!">
+  <form class="form">
+    <div class="fields">
+      <div class="nameField">
+        <label for="name" style="margin-left: 15px;">Enter your name:</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div class="countryFiled">
+        <label for="country" style="margin-left: 15px;">Select your country</label>
+        <select name="country" id="country">
+          <option value="">...</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn" onclick="move()" type="button">Let's play</button>
+  </form>
+
+  <div id="dialogue">
+    <img class="bush" src="./images/bush.png" alt="bush">
+    <img class="bubble" src="./images/bubble.png" alt="bubble">
+    <p class="dialogueText"></p>
+  </div>
+
+  <audio id="boomEffect" src="./sounds/boom.mp3" type="audio/mpeg"></audio>
   <!-- <img id="boom3" class="boom" src="./images/boom.png" alt="boooooooom!"> -->
   <script src="index.js"></script>
 </body>
