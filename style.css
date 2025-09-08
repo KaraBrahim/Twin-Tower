@@ -132,8 +132,10 @@ img {
   /* Force dropdown to open downward */
   direction: ltr;
   writing-mode: horizontal-tb;
-  max-height: 80px; /* Adjust the pixel value to make it shorter/taller */
-  overflow-y: auto; /* Adds scrollbar if needed */
+  max-height: 80px;
+  /* Adjust the pixel value to make it shorter/taller */
+  overflow-y: auto;
+  /* Adds scrollbar if needed */
 }
 
 /* Alternative approach - move the form higher or add margin to ensure space below */
@@ -148,7 +150,8 @@ img {
   flex-direction: column;
   font-family: "Pixelify Sans";
   width: 40%;
-  top: 40%; /* Changed from 50% to 40% to give more space below */
+  top: 40%;
+  /* Changed from 50% to 40% to give more space below */
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   position: absolute;
@@ -279,12 +282,11 @@ img {
   height: auto;
 }
 
-
-
 @keyframes plainShake {
   from {
     transform: translateY(0)
   }
+
   to {
     transform: translateY(-40px)
   }
@@ -296,14 +298,14 @@ img {
     width: 90%;
     padding: 30px 20px;
   }
-  
+
   #country,
   #name {
     width: 95%;
     height: 40px;
     font-size: 14px;
   }
-  
+
   .btn {
     z-index: 89;
     padding: 12px 24px;
@@ -311,14 +313,15 @@ img {
   }
 }
 
-.bush{
+.bush {
   bottom: 0;
   width: 190px;
   height: auto;
   position: absolute;
   z-index: 40;
 }
-.bubble{
+
+.bubble {
   left: 60px;
   bottom: 0;
   width: 700px;
@@ -326,9 +329,10 @@ img {
   position: absolute;
   z-index: 39
 }
-.dialogueText{
+
+.dialogueText {
   height: 200px;
-  color:#fff;
+  color: #fff;
   left: 195px;
   bottom: 10px;
   width: 500px;
@@ -338,17 +342,111 @@ img {
   font-family: "Pixelify Sans";
 }
 
-#dialogue{
+.blackList {
+  left: 900px;
+  bottom: 0;
+  width: 280px;
+  height: auto;
+  position: absolute;
+  z-index: 39
+}
+
+#dialogue {
   display: none;
 }
 
-select {
-    direction: ltr;
+.blackListArea {
+  position: absolute;
+  height: 540px;
+  display: none;
+  /* Initially hidden */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Semi-transparent background */
+  transform: translateY(100%);
+  /* Start from bottom */
+  transition: transform 0.8s ease-in-out;
+  /* Smooth animation */
+  left: 900px;
+  /* Position on the right side */
+  bottom: 0px;
+  /* Start from bottom of screen */
+  width: 280px;
+  /* Same width as blackList image */
+  z-index: 60;
+  /* Higher than other elements */
+  border-radius: 10px;
+  /* Rounded corners */
 }
 
-/* For more control, you can also try: */
-select option {
-    direction: ltr;
+.blackListButton {
+  z-index: 300;
+  position: absolute;
+  bottom: 50px;
+  left: 370px;
+  font-family: "Pixelify Sans";
+  /* display: none; */
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in;
+}
+
+.blackListButton:hover {
+  transform: scale(1.3) rotate(2deg);
+}
+
+#dialogue>span>span {
+  color: rgb(0, 0, 0);
+}
+
+.blackListArea>span {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two equal columns */
+  gap: 10px 20px;
+  /* Smaller gaps */
+  max-height: 400px;
+  /* Limit height */
+  overflow-y: auto;
+  /* Scroll if too many rows */
+  padding: 20px 15px;
+  /* Better padding */
+  font-family: "Pixelify Sans";
+  color: white;
+  /* White text color */
+  font-size: 14px;
+  /* Smaller font size */
+  position: relative;
+  /* Remove absolute positioning */
+  top: 50px;
+  /* Space from top for the image */
 }
 
 
+#loader {
+  position: fixed;
+  top: 87.5%;
+  left: 42%;
+  /* transform: translate(-50%, -50%); */
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* #content {
+  display: none;
+  text-align: center;
+} */

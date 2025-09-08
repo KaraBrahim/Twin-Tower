@@ -11,19 +11,19 @@
 <body>
   <div id="background">
     <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
+    <!-- <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
     <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
-    <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
-    <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
+    <div class="parts"><img src="./images/city background 1.png" alt="background"></div> -->
     <!-- <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
     <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
     <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
     <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
     <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
     <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
-    <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
-    <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
-    <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
     <div class="parts"><img src="./images/city background 1.png" alt="background"></div> -->
+    <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
+    <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
+    <div class="parts"><img src="./images/city background 1.png" alt="background"></div>
     <div class="parts">
       <img class="area" src="./images/city background 4.png" alt="background">
       <img class="obstacl" src="./images/towers trans.png" alt="background">
@@ -42,7 +42,7 @@
     <div class="fields">
       <div class="nameField">
         <label for="name" style="margin-left: 15px;">Enter your name:</label>
-        <input type="text" name="name" id="name">
+        <input value="geust" type="text" name="name" id="name">
       </div>
       <div class="countryFiled">
         <label for="country" style="margin-left: 15px;">Select your country</label>
@@ -52,15 +52,37 @@
       </div>
     </div>
     <button class="btn" onclick="move()" type="button">Let's play</button>
+    <!-- <button class="btn" onclick="retriveInfo()" type="button">get black list</button> -->
   </form>
 
   <div id="dialogue">
     <img class="bush" src="./images/bush.png" alt="bush">
     <img class="bubble" src="./images/bubble.png" alt="bubble">
+
+    <div class="blackListArea">
+      <img class="blackList" src="./images/blackList.png" alt="blackList">
+      <span>
+        <span style="
+  color: rgb(255, 136, 9);
+  border-bottom: 1px solid rgb(255, 136, 9);
+  display: block;       
+  width: 100%;  
+        ">Name</span>
+        <span style="
+  color: rgb(255, 136, 9);
+  border-bottom: 1px solid rgb(255, 136, 9);
+  display: block;       
+  width: 100%;  
+      ">country</span>
+      </span>
+    </div>
     <p class="dialogueText"></p>
+    <div id="loader"></div>
+    <button onclick="unhideList()" class="blackListButton" disabled>show black list</button>
   </div>
 
   <audio id="boomEffect" src="./sounds/boom.mp3" type="audio/mpeg"></audio>
+  <audio id="airPlain" src="./sounds/airplain.mp3" type="audio/mpeg"></audio>
   <!-- <img id="boom3" class="boom" src="./images/boom.png" alt="boooooooom!"> -->
   <script src="index.js"></script>
 </body>
